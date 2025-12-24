@@ -1,0 +1,116 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* BACKGROUND ANIMATION */
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+/* LOGIN CARD */
+.login-card {
+    width: 360px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+    animation: cardIn 1s ease forwards;
+}
+
+/* TITLE */
+.login-card h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* FLOATING LABEL */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -6px;
+    font-size: 12px;
+    color: #2c5364;
+}
+
+/* BUTTON */
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2c5364, #0f2027);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* ANIMATIONS */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

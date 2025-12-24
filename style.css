@@ -57,3 +57,56 @@ nav a:hover {
     margin-top: 20px;
     border-radius: 8px;
 }
+
+.toggle-video {
+    display: none;
+}
+
+#showVideo:checked + .btn + .toggle-video {
+    display: block;
+}
+
+/*==================================*/
+
+/* LOGIN PAGE */
+.login-box {
+    width: 300px;
+    margin: 120px auto;
+    padding: 25px;
+    background: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-box input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 8px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #555;
+}
+
+/* LOGOUT BUTTON */
+.nav-logout {
+    background: #e63946;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.nav-logout:hover {
+    background: #c1121f;
+    color: white;
+}
